@@ -1,0 +1,45 @@
+<ng-container
+  *ngTemplateOutlet="control ? withControl : withOutControl"
+></ng-container>
+
+<ng-template #withControl>
+  <input
+    *ngIf="rows === 1"
+    nz-input
+    [placeholder]="placeholder"
+    [formControl]="$any(control)"
+    [type]="type"
+    [nzStatus]="showError() ? 'error' : ''"
+  />
+
+  <textarea
+    *ngIf="rows > 1"
+    [rows]="rows"
+    [placeholder]="placeholder"
+    [formControl]="$any(control)"
+    [nzStatus]="showError() ? 'error' : ''"
+    nz-input
+  ></textarea>
+</ng-template>
+
+<ng-template #withOutControl>
+  <input
+    *ngIf="rows === 1"
+    nz-input
+    [placeholder]="placeholder"
+    [value]="value"
+    (input)="valueChange.emit($event.target.value)"
+    [type]="type"
+  />
+
+  <textarea
+    *ngIf="rows > 1"
+    [rows]="rows"
+    [placeholder]="placeholder"
+    [value]="value"
+    (input)="valueChange.emit($event.target.value)"
+    nz-input
+  ></textarea>
+</ng-template>
+
+<p *ngIf="showError() && control" class="error">{{ getErrorMessage() }}</p>

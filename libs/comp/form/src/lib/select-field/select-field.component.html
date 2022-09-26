@@ -1,0 +1,5 @@
+<nz-select [formControl]="$any(control)"  [nzPlaceHolder]="placeholder">
+  <nz-option *ngFor="let option of options"
+             [nzValue]="option.id"
+             [nzLabel]="option.label" [nzDisabled]="option.disabled"></nz-option>
+</nz-select>

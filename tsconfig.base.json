@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cs-app-uis/comp/common": ["libs/comp/common/src/index.ts"],
+      "@cs-app-uis/comp/form": ["libs/comp/form/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

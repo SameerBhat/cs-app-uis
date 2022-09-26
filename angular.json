@@ -2,6 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "comp-common": "libs/comp/common",
+    "comp-form": "libs/comp/form",
+    "cs-fleetmon": "apps/cs-fleetmon",
+    "cs-fleetmon-e2e": "apps/cs-fleetmon-e2e",
     "ui-demo": "apps/ui-demo",
     "ui-demo-e2e": "apps/ui-demo-e2e"
   }

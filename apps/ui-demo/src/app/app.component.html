@@ -1,1 +1,51 @@
-<cs-app-uis-nx-welcome></cs-app-uis-nx-welcome>
+<cs-app-uis-button  variant="primary" tooltip="This is the demo button"> UI Demo Button </cs-app-uis-button>
+
+<br>
+<br>
+<br>
+
+
+
+<h1>Icons</h1>
+
+
+<div style="display: grid; grid-template-columns: repeat(20, 1fr); gap: 10px;">
+  <cs-app-uis-icon *ngFor="let icon of icons;" [icon]="icon" [tooltip]="icon"></cs-app-uis-icon>
+
+</div>
+
+
+
+<h1>Form Components</h1>
+
+<cs-app-uis-select-field placeholder="Search" [control]="form.get('select')" [options]="options"></cs-app-uis-select-field>
+
+<br>
+<br>
+
+<cs-app-uis-search-field tooltip="Search Field" placeholder="Search" [control]="form.get('search')"></cs-app-uis-search-field>
+
+<br>
+<br>
+
+<cs-app-uis-text-field-component placeholder="name" [control]="form.get('name')"></cs-app-uis-text-field-component>
+
+<br>
+<br>
+
+<cs-app-uis-text-field-component type="number" placeholder="age" [control]="form.get('age')"></cs-app-uis-text-field-component>
+
+
+
+<br>
+<br>
+
+<cs-app-uis-text-field-component placeholder="Address" [control]="form.get('address')" [rows]="3"></cs-app-uis-text-field-component>
+
+
+<br>
+<br>
+
+{{value}}
+<cs-app-uis-text-field-component placeholder="two way data binding" [(value)]="value"></cs-app-uis-text-field-component>
+
